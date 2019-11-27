@@ -1,0 +1,139 @@
+.container {
+  text-align: center;
+  padding: 5%;
+}
+
+.grid-container {
+  padding: 5% 15%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, 20%);
+  grid-template-rows: repeat(2, 40vh);
+  grid-gap: 2%;
+}
+.grid-container__block {
+  box-shadow: 0 10px 13px -7px rgba(162, 161, 196, 0.57);
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  position: relative;
+}
+.grid-container__block__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.grid-container__block__info-panel {
+  color: #eaeaea;
+  bottom: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 20px;
+  position: absolute;
+  background-color: rgba(2, 2, 3, 0.81);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+.grid-container__block__info-span {
+  width: 30px;
+  padding: 2px;
+  text-align: center;
+  font-size: 12px;
+}
+.grid-container__info-page {
+  display: none;
+  color: white;
+  background: rgba(2, 2, 3, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+}
+.grid-container__info-page.active {
+  display: block;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.input-field {
+  border-radius: 4px;
+  padding: 1%;
+  border: 1px solid #5968b3;
+}
+.input-field:focus {
+  outline: 1px solid #665382;
+  border-radius: 4px;
+}
+
+.button-main {
+  background: #5968b3 linear-gradient(to bottom, #b3c9f5 5%, #adadf0 100%);
+  border-radius: 4px;
+  cursor: pointer;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 1%;
+  vertical-align: center;
+  margin-left: 1%;
+}
+.button-main:hover {
+  background: #b3c9f5 linear-gradient(to bottom, #adadf0 5%, #b3c9f5 100%);
+}
+.button-main:focus {
+  outline: none;
+}
+.button-main:active {
+  position: relative;
+  top: 1px;
+}
+
+.link-info {
+  cursor: pointer;
+  background-size: contain;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-image: url(https://img.icons8.com/metro/26/000000/info.png);
+}
+
+.sizes {
+  margin-top: 20%;
+}
+
+.origin-link {
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: underline;
+  color: white;
+}
+
+@media screen and (max-width: 640px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 45%);
+    grid-template-rows: repeat(4, 25%);
+    grid-gap: 1%;
+  }
+  .grid-container__info-page {
+    font-size: 12px;
+  }
+
+  .button-main {
+    font-size: 11px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
