@@ -72,7 +72,7 @@ const getGifs = async (value) => {
   if (document.querySelector('.grid-container').childNodes) {
     document.querySelector('.grid-container').innerHTML = '';
   }
-  const xhr = await fetch(`http://api.giphy.com/v1/gifs/search?q=${value}&api_key=${apiKey}&limit=8`);
+  const xhr = await fetch(`https://api.giphy.com/v1/gifs/search?q=${value}&api_key=${apiKey}&limit=8`);
   const response = await xhr.json();
   const gifData = await response.data;
   await gifData.map((el) => buildGalleryImage(el));
