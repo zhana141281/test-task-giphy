@@ -5,13 +5,12 @@
 
 .grid-container {
   padding: 5% 15%;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   display: grid;
-  grid-template-columns: repeat(4, 20%);
+  grid-template-columns: repeat(4, 25%);
   grid-template-rows: repeat(2, 40vh);
-  grid-gap: 2%;
+  grid-gap: 1%;
 }
 .grid-container__block {
   box-shadow: 0 10px 13px -7px rgba(162, 161, 196, 0.57);
@@ -35,13 +34,15 @@
   height: 20px;
   position: absolute;
   background-color: rgba(2, 2, 3, 0.81);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
   text-align: center;
 }
 .grid-container__block__info-span {
-  width: 30px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block;
+  width: 70%;
+  height: 100%;
   padding: 2px;
   text-align: center;
   font-size: 12px;
@@ -74,7 +75,7 @@
   border: 1px solid #5968b3;
 }
 .input-field:focus {
-  outline: 1px solid #665382;
+  border: 2px solid #665382;
   border-radius: 4px;
 }
 
@@ -85,7 +86,6 @@
   color: #ffffff;
   font-weight: bold;
   padding: 1%;
-  vertical-align: center;
   margin-left: 1%;
 }
 .button-main:hover {
